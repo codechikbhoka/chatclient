@@ -1,0 +1,46 @@
+This project is developed by : VIVEK BHARGAV
+Roll Number :11010172
+
+
+Question Statement :
+
+Problem 1: Peer-to-Peer System
+
+Peer-to-peer applications are a common feature of computing today. Services from BitTorrent to Skype all rely on direct client to client contact. In this programming assignment you will construct a simple peer-to-peer based relay application. This application will demonstrate the basic operation of peer-to-peer communication.
+For this lab, you need to write a client and a server utilizing TCP socket connections. The client must be able to connect to the server and obtain a list of available clients. After obtaining this list, the client must be able to connect to one other client on the list. The clients must then be capable of relaying text messages directly to one another without further help from the server.
+You can define whatever convention you would like to indicate that a text message is complete (e.g. hitting [Enter], clicking send). Each client must send an acknowledgement to the other client that a text message has been received and displayed. You must also provide some way to disconnect and end the conversation. After disconnecting, the user should be able to retrieve a new copy of the server’s client list and connect to a new client. The connection between the two clients must be duplex, so both clients are capable of transmitting and receiving at the same time.
+This can be envisioned as a simple chat application, where you can figure out who is online from the server and then talk to those other users directly.
+
+
+How to use :
+
+The project consists of two files :
+i) CentralServer.cpp
+ii) user.cpp
+
+First you have to run the server(Central Server) using following commands :
+i) cd /Path-to-dir-containing-this-file
+ii) g++ CentralServer.cpp -w
+iii) ./a.out
+
+
+Then run the user program:
+i) g++ user.cpp
+ii) ./a.out 127.0.0.1  (127.0.0.1 is just for example, you have to put ip address of machine which is hosting server)
+
+
+It will ask for a nick: type your name and press enter
+
+run 2-3 user programs in different windows or machines
+each time you connect you will be presented by currently online machines
+Type the following command in any one of the user machine : connect
+you will be shown all users online
+type id of the user you want to connect.
+
+you will be connected to that user
+type a few messages in both the machines to enjoy chatting.
+
+type "quit" to finish
+
+
+Precaution: quit all user programs before quitting server else it will refuse to connect the other time you try to reach server. 
